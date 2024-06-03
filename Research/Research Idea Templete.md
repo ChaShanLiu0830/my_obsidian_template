@@ -1,7 +1,8 @@
 ---
-title: <% tp.file.folder() %>
-modified date: <% tp.date.now("YYYY-MM-DD") %>
-tags:
+title: "<% tp.file.folder() %>"
+date: <% tp.date.now("YYYY-MM-DD") %>
+tags: [<%  tp.file.folder().replace(/[-\s]/g, '_').toLowerCase() %>,research]
+status: [In Progress, Completed]
 ---
 
 # <% tp.file.title %>

@@ -8,6 +8,11 @@ tags:
   - learning
   - keywords
 ---
+<%*
+const parentFolderName = tp.file.folder(true).split('/').slice(-2, -1)[0];
+const todayDate = tp.date.now("YYYY-MM-DD");
+await tp.file.rename(`${parentFolderName}`);
+%>
 
 # <%tp.file.folder()%> Progress - <% tp.file.title %>
 

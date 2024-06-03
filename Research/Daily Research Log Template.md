@@ -1,24 +1,14 @@
-
+---
+title: "<% tp.date.now("YYYY-MM-DD") %> - Daily Research Log"
+date: <% tp.date.now("YYYY-MM-DD") %>
+tags: [daily_notes, research, <%  tp.file.folder(true).split('/').slice(-2, -1)[0].replace(/[-\s]/g, '_').toLowerCase()%>  ]
+status: [In Progress, Completed]
+---
 <%*
 const parentFolderName = tp.file.folder(true).split('/').slice(-2, -1)[0];
 const todayDate = tp.date.now("YYYY-MM-DD");
 await tp.file.rename(`${todayDate} - Daily Research Log`);
 %>
-
----
-title: "<% tp.date.now("YYYY-MM-DD") %> - Daily Research Log"
-date: <% tp.date.now("YYYY-MM-DD") %>
-tags: [daily notes, research, <% parentFolderName %>  ]
-
----
-
-# <% tp.date.now("YYYY-MM-DD") %> - Daily Research Log
-
-**Date:** <% tp.date.now("YYYY-MM-DD") %>  
-**Research Topic:** <% parentFolderName %>  
-**Status:** [In Progress / Completed]
-
----
 
 ## Morning Planning
 - **Objectives**: [Objective 1], [Objective 2]
